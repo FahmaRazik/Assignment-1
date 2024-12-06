@@ -174,3 +174,16 @@ if (currentUser) {
 
 // Listen for the keydown event to trigger the jump
 document.addEventListener("keydown", jump);
+
+// Bonus Button Functionality
+const bonusBtn = document.getElementById("bonus-btn");
+
+bonusBtn.addEventListener("click", () => {
+    score += 50; // Award 50 bonus marks
+    document.getElementById("score").textContent = `Score: ${score} | High Score: ${highScore}`;
+    alert("50 Bonus Marks Awarded! Redirecting to the Banana API...");
+
+    // Redirect to the Banana API
+    window.location.href = "https://marcconrad.com/uob/banana/";
+});
+``
